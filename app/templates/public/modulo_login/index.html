@@ -1,0 +1,22 @@
+{% extends 'public/modulo_login/base_login.html' %}
+{% block title %}Login | Contreras Corp{% endblock %}
+
+{% block body %}
+
+<!--Login-->
+    <div class="cajaLogin">
+      {% include 'public/modulo_login/login.html' %}
+    </div>
+
+
+    <!---Register User-->
+    <div class="formRegisterUser" style="display:none;">
+      {% include 'public/modulo_login/registerUser.html' %}
+    </div>
+    <!---fin register User-->
+
+<!---Mensales - alertas-->
+{% include 'public/dashboard/pages/alerts.html' %}
+
+
+{% endblock %}

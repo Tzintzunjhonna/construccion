@@ -1,0 +1,95 @@
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+  <style>
+    .cascading-right {
+      margin-right: -50px;
+    }
+
+    @media (max-width: 991.98px) {
+      .cascading-right {
+        margin-right: 0;
+      }
+    }
+  </style>
+
+  <!-- Jumbotron -->
+  <div class="container py-4">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+          <div class="card-body p-5 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Registrar usuario</h2>
+            <form action="{{ url_for('registerUser') }}" method="POST" autocomplete="off">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="nombre" class="form-label">Primer Nombre</label>
+                    <input type="text" name="nombre" class="form-control" autofocus required>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <label for="apellido" class="form-label">Primer Apellido</label>
+                    <input type="text" name="apellido" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <label for="email" class="form-label mt-3">Email</label>
+                <input type="email" name="email" class="form-control" required>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <label for="password" class="form-label mt-3">Password</label>
+                <input type="password" name="password" class="form-control" required>
+              </div>
+
+              <!-- Password Confirm input -->
+              <div class="form-outline mb-4">
+                <label for="repite_password" class="form-label mt-3">Repetir Password</label>
+                <input type="password" name="repite_password" class="form-control" required>
+              </div>
+
+              <!-- select-->
+              <div class="form-outline mb-4">
+                <label for="repite_password" class="form-label mt-3">Sexo</label>
+                <select name="sexo" class="form-control" required>
+                    <option value="" selected="selected">Seleccione una opción</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4" id="sendForm">
+                Crear cuenta
+              </button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                <a href="#" style="color: #555;" class="volverViewLogin">
+                    <i class="bi bi-arrow-left-short"></i>
+                    Volver
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+          alt="" />
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->

@@ -1,0 +1,44 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="{{url_for('static', filename ='assets/imgs/login.jpg') }}"
+          class="img-fluid" alt="Logo de login">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form action="{{ url_for('loginUser') }}" method="POST" autocomplete="off">
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label for="email" class="form-label">Ingresa email</label>
+            <input type="email" name="email" id="email" class="form-control" required="true" placeholder="Ingresa un email">
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+                <label for="password" class="form-label mt-4">Escribe tu contraseña</label>
+                <input type="password" name="password" class="form-control" required="true" placeholder="Ingresa una contraseña">
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Acceder</button>
+            <p class="small fw-bold mt-2 pt-1 mb-0">¿No recuerdas la contraseña?</p>
+                <a href="#" id="link_sign_up" class="createUser">
+                  Crear cuenta
+                </a>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Creado por Contreras Corp 2023. Todos los derechos son reservados
+    </div>
+    <!-- Copyright -->
+  </div>
+</section>
